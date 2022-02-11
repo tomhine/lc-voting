@@ -28,8 +28,18 @@ module.exports = {
             fontFamily: {
                 sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
             },
+            fontSize: {
+                xxs: ["0.625rem", { lineHeight: "1rem" }],
+            },
+            boxShadow: {
+                card: "4px 4px 15px 0 rgba(36, 37, 38, 0.08)",
+                dialog: "3px 4px 15px 0 rgba(36, 37, 38, 0.22)",
+            },
         },
     },
 
-    plugins: [require("@tailwindcss/forms")],
+    plugins: [
+        require("@tailwindcss/forms"),
+        require("@tailwindcss/line-clamp"),
+    ],
 };

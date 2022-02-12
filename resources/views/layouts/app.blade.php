@@ -84,13 +84,13 @@
                                 <div class="flex items-center justify-between gap-3">
                                     <button
                                         class="flex items-center justify-center w-1/2 h-11 text-xs bg-gray-200 font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition ease-in px-6 py-3"
-                                        type="submit">
+                                        type="button">
                                         <x-icon.paperclip />
                                         <span class="ml-1">Attach</span>
                                     </button>
                                     <button
                                         class="flex items-center justify-center w-1/2 h-11 text-xs text-white bg-blue font-semibold rounded-xl border border-blue hover:bg-blue-hover transition ease-in px-6 py-3"
-                                        type="button">
+                                        type="submit">
                                         Submit
                                     </button>
                                 </div>

@@ -38,23 +38,25 @@
               hover:border-gray-400">Vote</button>
         </div>
       </div>
-      <div class="flex px-2 py-6">
-        <a href="#" class="flex-none">
-          <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar" class="w-14 h-14 rounded-xl">
-        </a>
-        <div class="mx-4">
+      <div class="flex flex-1 px-2 py-6">
+        <div class="flex-none">
+          <a href="#">
+            <img src="https://source.unsplash.com/200x200/?face&crop=face&v=1" alt="avatar"
+              class="w-14 h-14 rounded-xl">
+          </a>
+        </div>
+        <div class="w-full mx-4">
           <h4 class="text-xl font-semibold ">
             <a href="#" class="hover:underline">A random title can go here</a>
           </h4>
-          <div class="text-gray-600 mt-3 line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto
-            alias sapiente
-            dolor illo est voluptatum repellat laboriosam quos in ea odit, quidem cum consequuntur ipsam nulla pariatur
-            architecto aperiam quibusdam consequatur aliquid maiores ipsa ullam molestiae tempora? Eum suscipit vel
-            officiis molestias. Sed eligendi debitis temporibus quibusdam quasi numquam enim delectus repellendus
-            deleniti sit! Laborum quaerat voluptates aliquid blanditiis possimus ullam rem vel non obcaecati distinctio
-            a incidunt, quae corporis minima aliquam libero mollitia id nemo architecto, voluptate at dolore modi. Neque
-            magnam iste dolor, fugit officiis amet exercitationem provident voluptatibus ipsa soluta est reiciendis,
-            voluptatum, quae quod facilis error!
+          <div class="text-gray-600 mt-3 line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Veritatis aperiam officia laudantium maiores dolore quod corrupti, quasi voluptas ratione consectetur rerum
+            iure labore suscipit in enim pariatur excepturi architecto fugit nisi? Quisquam alias veniam nobis. Facilis,
+            esse optio eum consequatur necessitatibus incidunt natus, quis dolorem obcaecati officiis porro voluptas,
+            iure quisquam quasi cum. Quis nobis totam nulla autem veniam repellendus cumque ex iste distinctio nihil
+            delectus cum exercitationem, a voluptatum quasi? Ducimus unde labore ea ullam quaerat quibusdam illo earum
+            exercitationem voluptatum. Ut ipsum quae repellendus consectetur, nulla ab a vel aperiam libero velit illum?
+            Voluptate libero aspernatur perferendis cumque!
           </div>
           <div class="flex items-center justify-between mt-6">
             <div class="flex items-center text-xs font-semibold space-x-2 text-gray-400">
@@ -70,7 +72,8 @@
                 Open
               </div>
               <div>
-                <button class="relative bg-gray-100 hover:bg-gray-200 rounded-full h-7 transitin ease-in py-2 px-3">
+                <button
+                  class="relative bg-gray-100 border hover:bg-gray-200 rounded-full h-7 transitin ease-in py-2 px-3">
                   <x-icon.ellipsis />
                 </button>
                 <ul class="absolute w-44 ml-8 font-semibold bg-white shadow-dialog rounded-xl py-3">

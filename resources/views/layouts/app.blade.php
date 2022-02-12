@@ -55,7 +55,7 @@
     <main class="container max-w-custom mx-auto flex gap-5">
         <div class="w-70">
             <div class="p-0.5 mt-16 rounded-xl bg-gradient-to-t from-transparent via-blue/20 to-blue/30">
-                <div class="bg-white rounded-xl">
+                <div class="bg-white rounded-[10px]">
                     <div class="text-center px-4 py-2 pt-6">
                         <h3 class="font-semibold text-base">Add an idea</h3>
                         <p class="text-xs mt-4">Let us know what you would like and we'll take a look over!</p>
@@ -81,18 +81,12 @@
                                         class="w-full bg-gray-100 border-none rounded-xl resize-none placeholder:text-gray-900 text-sm px-4 py-2"
                                         placeholder="Describe your idea"></textarea>
                                 </div>
-                                <div class="flex items-center justify-between gap-3">
-                                    <button
-                                        class="flex items-center justify-center w-1/2 h-11 text-xs bg-gray-200 font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition ease-in px-6 py-3"
-                                        type="button">
+                                <div class="flex items-center gap-3">
+                                    <x-button.gray class="text-xs">
                                         <x-icon.paperclip />
                                         <span class="ml-1">Attach</span>
-                                    </button>
-                                    <button
-                                        class="flex items-center justify-center w-1/2 h-11 text-xs text-white bg-blue font-semibold rounded-xl border border-blue hover:bg-blue-hover transition ease-in px-6 py-3"
-                                        type="submit">
-                                        Submit
-                                    </button>
+                                    </x-button.gray>
+                                    <x-button.blue type='submit' class="text-xs">Submit</x-button.blue>
                                 </div>
                             </form>
                         </div>

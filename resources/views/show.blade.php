@@ -50,12 +50,14 @@
                             class="bg-gray-200 text-xxs font-bold uppercase leading-none rounded-full text-center w-28 h-7 py-2 px-4">
                             Open
                         </div>
-                        <div>
-                            <button
+                        <div x-data="{ isOpen: false }">
+                            <button @click="isOpen = !isOpen"
                                 class="relative bg-gray-100 border hover:bg-gray-200 rounded-full h-7 transitin ease-in py-2 px-3">
                                 <x-icon.ellipsis />
                             </button>
-                            <ul class="hidden absolute w-44 ml-8 font-semibold bg-white shadow-dialog rounded-xl py-3">
+                            <ul x-show="isOpen" x-cloak @click.outside="isOpen = false"
+                                @keydown.escape.window="isOpen = false" x-transition.origin.top.left
+                                class="absolute w-44 ml-8 font-semibold bg-white shadow-dialog rounded-xl py-3">
                                 <li>
                                     <a href="#" class="block hover:bg-gray-100 px-5 py-3 transition ease-in">
                                         Mark as Spam
@@ -76,9 +78,11 @@
 
     <div class="buttons-container flex items-center justify-between mt-6">
         <div class="flex items-center gap-4 ml-6">
-            <div class="relative">
-                <x-button.blue class="w-32">Reply</x-button.blue>
-                <div class="absolute z-10 w-104 text-left font-semibold bg-white shadow-dialog rounded-xl mt-2">
+            <div x-data="{ isOpen: false }" class="relative">
+                <x-button.blue @click="isOpen = !isOpen" class="w-32">Reply</x-button.blue>
+                <div x-show="isOpen" x-cloak @click.outside="isOpen = false" @keydown.escape.window="isOpen = false"
+                    x-transition.origin.top.left
+                    class="absolute z-10 w-104 text-left font-semibold bg-white shadow-dialog rounded-xl mt-2">
                     <form action="#" class="space-y-4 px-4 py-6">
                         <div>
                             <textarea name="post_comment" id="post_comment" cols="30" rows="4"
@@ -95,12 +99,14 @@
                     </form>
                 </div>
             </div>
-            <div class="relative">
-                <x-button.gray class="w-36">
+            <div x-data="{ isOpen: false }" class="relative">
+                <x-button.gray @click="isOpen = !isOpen" class="w-36">
                     <span class="mr-1">Set status</span>
                     <x-icon.chevron-down />
                 </x-button.gray>
-                <div class="absolute z-20 w-76 text-left font-semibold bg-white shadow-dialog rounded-xl mt-2">
+                <div x-show="isOpen" x-cloak @click.outside="isOpen = false" @keydown.escape.window="isOpen = false"
+                    x-transition.origin.top.left
+                    class="absolute z-20 w-76 text-left font-semibold bg-white shadow-dialog rounded-xl mt-2">
                     <form action="#" class="space-y-4 px-4 py-6">
                         <div class="space-y-2">
                             <div>
@@ -199,13 +205,14 @@
                         </div>
                         <div class="flex items-center space-x-2">
 
-                            <div>
-                                <button
+                            <div x-data="{ isOpen: false }">
+                                <button @click="isOpen = !isOpen"
                                     class="relative bg-gray-100 border hover:bg-gray-200 rounded-full h-7 transitin ease-in py-2 px-3">
                                     <x-icon.ellipsis />
                                 </button>
-                                <ul
-                                    class="hidden absolute w-44 ml-8 font-semibold bg-white shadow-dialog rounded-xl py-3">
+                                <ul x-show="isOpen" x-cloak @click.outside="isOpen = false"
+                                    @keydown.escape.window="isOpen = false" x-transition.origin.top.left
+                                    class="absolute z-10 w-44 ml-8 font-semibold bg-white shadow-dialog rounded-xl py-3">
                                     <li>
                                         <a href="#" class="block hover:bg-gray-100 px-5 py-3 transition ease-in">
                                             Mark as Spam
@@ -225,7 +232,8 @@
         </div> <!-- end comment container -->
 
         <div
-            class="comment-container is-admin relative p-0.5 rounded-xl bg-gradient-to-tr from-purple/50 via-blue/50 to-blue/30">
+            class="comment-container is-admin relative p-0.5 rounded-xl bg-gradient-to-r from-purple/50 via-blue/70 to-sky-4
+            00/90">
             <div class="bg-white rounded-[10px] flex">
                 <div class="flex flex-1 px-4 py-6">
                     <div class="flex-none">

@@ -18,28 +18,14 @@
             </div>
             <div class="w-full mx-4">
                 <h4 class="text-xl font-semibold ">
-                    <a href="#" class="hover:underline">A random title can go here</a>
+                    <a href="#" class="hover:underline">{{ $idea->title }}</a>
                 </h4>
-                <div class="text-gray-600 mt-3 line-clamp-3">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Veritatis aperiam officia laudantium maiores dolore quod corrupti, quasi voluptas ratione
-                    consectetur rerum
-                    iure labore suscipit in enim pariatur excepturi architecto fugit nisi? Quisquam alias veniam nobis.
-                    Facilis,
-                    esse optio eum consequatur necessitatibus incidunt natus, quis dolorem obcaecati officiis porro
-                    voluptas,
-                    iure quisquam quasi cum. Quis nobis totam nulla autem veniam repellendus cumque ex iste distinctio
-                    nihil
-                    delectus cum exercitationem, a voluptatum quasi? Ducimus unde labore ea ullam quaerat quibusdam illo
-                    earum
-                    exercitationem voluptatum. Ut ipsum quae repellendus consectetur, nulla ab a vel aperiam libero
-                    velit illum?
-                    Voluptate libero aspernatur perferendis cumque!
-                </div>
+                <div class="text-gray-600 mt-3 line-clamp-3">{{ $idea->description }}</div>
                 <div class="flex items-center justify-between mt-6">
                     <div class="flex items-center text-xs font-semibold space-x-2 text-gray-400">
-                        <div class="font-bold text-gray-900">John Doe</div>
+                        <div class="font-bold text-gray-900">{{ $idea->user->name }}</div>
                         <div>&bull;</div>
-                        <time>10 hours ago</time>
+                        <time>{{ $idea->created_at->diffForHumans() }}</time>
                         <div>&bull;</div>
                         <div>Category</div>
                         <div>&bull;</div>
@@ -192,10 +178,6 @@
                     </h4> --}}
                     <div class="text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing
                         elit.
-                        Veritatis aperiam officia laudantium maiores dolore quod corrupti, quasi voluptas ratione
-                        consectetur rerum
-                        iure labore suscipit in enim pariatur excepturi architecto fugit nisi? Quisquam alias veniam
-                        nobis.
                     </div>
                     <div class="flex items-center justify-between mt-6">
                         <div class="flex items-center text-xs font-semibold space-x-2 text-gray-400">
@@ -232,8 +214,7 @@
         </div> <!-- end comment container -->
 
         <div
-            class="comment-container is-admin relative p-0.5 rounded-xl bg-gradient-to-r from-purple/50 via-blue/70 to-sky-4
-            00/90">
+            class="comment-container is-admin relative p-0.5 rounded-xl bg-gradient-to-r from-purple/50 via-blue/70 to-sky-400/90">
             <div class="bg-white rounded-[10px] flex">
                 <div class="flex flex-1 px-4 py-6">
                     <div class="flex-none">

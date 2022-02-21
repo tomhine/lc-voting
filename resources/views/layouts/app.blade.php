@@ -20,13 +20,15 @@
         }
     </style>
 
+    @livewireStyles
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
 </head>
 
 <body class="font-sans antialiased text-gray-900 text-sm bg-gray-background">
     <header class="flex items-center justify-between px-8 py-4">
-        <a href="#">
+        <a href="/">
             <x-image.main-logo />
         </a>
         <div class="flex items-center">
@@ -60,7 +62,7 @@
 
     <main class="container max-w-custom mx-auto flex gap-5">
         <div class="w-70">
-            <div class="p-0.5 mt-16 rounded-xl bg-gradient-to-t from-transparent via-blue/20 to-blue/30">
+            <div class="sticky top-8 p-0.5 mt-16 rounded-xl bg-gradient-to-t from-transparent via-blue/20 to-blue/30">
                 <div class="bg-white rounded-[10px]">
                     <div class="text-center px-4 py-2 pt-6">
                         <h3 class="font-semibold text-base">Add an idea</h3>
@@ -138,6 +140,7 @@
         </div>
     </main>
 
+    @livewireScripts
 </body>
 
 </html>
